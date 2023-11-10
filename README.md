@@ -12,6 +12,8 @@ Video:
 
 # Description of the project
 
+A environmentally themed game where players assume the role of a young environmentalist tasked with cleaning up a virtual environment. The game combines elements of exploration and item collection in a 3D setting, aimed at promoting environmental awareness. 
+
 # Instructions for use
 
 
