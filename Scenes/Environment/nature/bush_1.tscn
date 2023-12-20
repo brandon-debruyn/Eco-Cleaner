@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b53nbs11ctpsw"]
+
+[ext_resource type="ArrayMesh" uid="uid://byor050of0se2" path="res://Assets/Models/modular_terrain_collection/Hilly_Prop_Bush_4.obj" id="1_8gscl"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_c6jri"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_8gscl")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.903869, 0, 0, 0, 1.06196, 0, 0.385638, -0.0208454)
+shape = SubResource("SphereShape3D_c6jri")

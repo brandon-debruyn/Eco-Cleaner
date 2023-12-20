@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://f8aw8lj1d2q6"]
+
+[ext_resource type="ArrayMesh" uid="uid://r0orgm64y0sn" path="res://Assets/Models/modular_terrain_collection/Hilly_Prop_Grass_Clump_4.obj" id="1_r38ov"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.001, 0, 0, 0, 1.001, 0, 0, 0, 1.001, 0, 0, 0)
+mesh = ExtResource("1_r38ov")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3trl418600g3"]
+
+[ext_resource type="PackedScene" uid="uid://c8gcnqp47t2hx" path="res://Scenes/Environment/hilly_park.tscn" id="1_r2jqf"]
+[ext_resource type="PackedScene" uid="uid://cpyuoak7u7vio" path="res://Scenes/Character/player_character.tscn" id="2_31ef3"]
+
+[node name="main" type="Node3D"]
+
+[node name="hilly_park" parent="." instance=ExtResource("1_r2jqf")]
+
+[node name="PlayerBody" parent="." instance=ExtResource("2_31ef3")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -3.37065, 1.84123, 0)
+speed = null
+jump_velocity = null

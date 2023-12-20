@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmtwogt5kihhy"]
+
+[ext_resource type="Script" path="res://Scenes/Environment/pollution/litter/CigBody.gd" id="1_13hrg"]
+[ext_resource type="ArrayMesh" uid="uid://bayd5uxfbb60e" path="res://Assets/Models/PSXCigarette Pack[FIXED]/CigarettePack/CigarettePacks/PackCigaretteStandardOpen.obj" id="1_wqhj4"]
+[ext_resource type="Texture2D" uid="uid://bh0bk5785acw8" path="res://Assets/Models/PSXCigarette Pack[FIXED]/Textures/packFrontTextureLowPolyOpened.png" id="2_k5prw"]
+[ext_resource type="AudioStream" uid="uid://0nwbui21i4e6" path="res://Assets/Sounds/JDSherbert_sfx_music/JDSherbert - Ultimate UI SFX Pack/Free/Stereo/mp3/JDSherbert - Ultimate UI SFX Pack - Swipe - 1.mp3" id="4_8b124"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qsfw6"]
+albedo_texture = ExtResource("2_k5prw")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ul2s"]
+
+[node name="CigRoot" type="Node3D"]
+
+[node name="CigBody" type="RigidBody3D" parent="."]
+script = ExtResource("1_13hrg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CigBody"]
+mesh = ExtResource("1_wqhj4")
+surface_material_override/0 = SubResource("StandardMaterial3D_qsfw6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CigBody"]
+transform = Transform3D(0.368858, 0, 0, 0, 1.39697, 0, 0, 0, 0.833811, 0, 0.934636, 1.82331)
+shape = SubResource("BoxShape3D_4ul2s")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_8b124")
+volume_db = 50.0

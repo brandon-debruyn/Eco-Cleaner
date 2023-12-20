@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdkoxofr284nb"]
+
+[ext_resource type="PackedScene" uid="uid://dh7hj7u0cirdr" path="res://Assets/Models/low_poly_trees/Models/Tree Type0 06.dae" id="1_q0fk1"]
+[ext_resource type="Texture2D" uid="uid://0o16xxndv6ve" path="res://Assets/Models/low_poly_trees/Textures/Colorsheet Tree Fall.png" id="2_6q34r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ap4m"]
+albedo_texture = ExtResource("2_6q34r")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xunt8"]
+
+[node name="tree_1_root" instance=ExtResource("1_q0fk1")]
+
+[node name="Tree_Type0_06_mesh" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_5ap4m")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(0.188983, 0, 0, 0, 1.13266, 0, 0, 0, 0.208768, 0, 1.13, 0)
+shape = SubResource("CylinderShape3D_xunt8")

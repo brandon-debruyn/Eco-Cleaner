@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu73jcgu2gfyy"]
+
+[ext_resource type="ArrayMesh" uid="uid://djrfcnis3iko4" path="res://Assets/Models/modular_terrain_collection/Shared_Prop_Boulder_6.obj" id="1_weavw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wms1i"]
+albedo_color = Color(0.301961, 0.270588, 0.223529, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_utvrd"]
+
+[node name="rock_2" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_weavw")
+surface_material_override/0 = SubResource("StandardMaterial3D_wms1i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1.24828, 0, 0, 0, 0.816974, 0, 0, 0, 1.02912, 0, 0.278173, 0.0331159)
+shape = SubResource("SphereShape3D_utvrd")
+disabled = true
