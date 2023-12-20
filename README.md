@@ -8,7 +8,7 @@ Class Group:
 
 Video:
 
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://youtu.be/SFk3p6un_KQ)
+[![YouTube]()](https://youtu.be/SFk3p6un_KQ)
 
 # Description of the project
 
